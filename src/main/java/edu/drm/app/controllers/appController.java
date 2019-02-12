@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.drm.app.dao.UserRepository;
+import edu.drm.app.dao.model.User;
 import edu.drm.app.presentation.UserSaveRequestDto;
 import lombok.AllArgsConstructor;
 
@@ -21,8 +22,8 @@ public class appController {
     }
 	
 	@PostMapping("/user")
-	public void saveUser(@RequestBody UserSaveRequestDto dto) {
-		userRepository.save(dto.toEntity());
+	public User saveUser(@RequestBody UserSaveRequestDto dto) {
+		return userRepository.save(dto.toEntity());
 	}
 	
 }
