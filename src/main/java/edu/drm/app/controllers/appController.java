@@ -33,7 +33,7 @@ public class appController {
 		return userRepository.save(dto.toEntity());
 	}
 	
-	@GetMapping(value = "/")
+	/*@GetMapping(value = "/")
 	public String index() {
 		OAuth2User user = getCurrentUser();
 		return "Hello " + user.getAttributes().get("name") + ". Your email is " + user.getAttributes().get("email")
@@ -44,5 +44,5 @@ public class appController {
 	public OAuth2User getCurrentUser() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		return ((OAuth2AuthenticationToken)auth).getPrincipal();
-	}
+	}*/
 }

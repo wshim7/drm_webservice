@@ -7,19 +7,19 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
 
-@Configuration
+/*@Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-@EnableOAuth2Client
+@EnableOAuth2Client*/
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
 	
-		@Override
+		/*@Override
 		protected void configure(HttpSecurity httpSecurity) throws Exception {
 			httpSecurity.authorizeRequests()
 				.anyRequest()
 				.authenticated()
 				.and()
 				.oauth2Login();
-		}	
+		}*/	
 }
